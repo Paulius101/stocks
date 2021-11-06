@@ -18,7 +18,9 @@ Platformos reikalavimai:
 Informacija apie serverį
 Atsisiųskite archyvą (zip) ir jame rasite serverį, kurį galite pasileisti lokaliai. Serverį galite pasiekti adresu http://localhost:3000.
 
-Serverio paleidimui naudokite šias komandas: * npm install * node index.js
+Serverio paleidimui naudokite šias komandas:
+* npm install 
+* node index.js
 
 Galimi serverio resursai (endpoints): 
 * GET /api/stock - grąžina visų egzistuojančių akcijų duomenis (JSON - stock modelių masyvą). 
