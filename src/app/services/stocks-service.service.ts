@@ -2,7 +2,7 @@ import {
   Injectable
 } from '@angular/core';
 import {
-  Stock
+  Stock, addFormInterface
 } from '../models/stock';
 import {
   HttpClient
@@ -33,7 +33,7 @@ export class StocksServiceService {
     });
   }
 
-  public postStock(stock: Stock): Observable < any > {
+  public postStock(stock:addFormInterface): Observable < any > {
     const request = this.http.post("http://localhost:3000/api/stock", stock);
 
     return request;

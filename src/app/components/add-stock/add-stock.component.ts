@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import { NgForm } from '@angular/forms';
 import { StocksServiceService } from 'src/app/services/stocks-service.service';
 import { Stock, addFormInterface } from 'src/app/models/stock';
 import { MessagesService } from 'src/app/services/messages.service';
@@ -13,7 +13,7 @@ import { NotificationType } from 'src/app/models/notification';
 })
 export class AddStockComponent implements OnInit {
 
-  constructor(private stockService:StocksServiceService, messageService:MessagesService) { }
+  constructor(private stockService:StocksServiceService, public messageService:MessagesService) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +21,10 @@ export class AddStockComponent implements OnInit {
     public addStock(form: NgForm): void {
     if (form.invalid) {
       console.log("Neteisingai įvesti duomenys!");
+      this.messageService.postMessage({
+        message: "Neteisingai įvesti duomenys!",
+        type: NotificationType.Error
+      });
       return;
     }
 
@@ -40,8 +44,9 @@ export class AddStockComponent implements OnInit {
 
     this.stockService.postStock(stock).subscribe((response) => {
 
+
       this.messageService.postMessage({
-        message: `Stock ${response.name} added with price ${response.price}`,
+        message: `Stock ${stock.name} added with price ${stock.price}`,
         type: NotificationType.Success
       });
 

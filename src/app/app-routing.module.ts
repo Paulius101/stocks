@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StocksListComponent } from './components/stocks-list/stocks-list.component';
-import { StockComponent } from './components/stock/stock.component';
+import { AddStockComponent} from './components/add-stock/add-stock.component'
 import { StockInfoComponent } from './components/stock-info/stock-info.component';
 
 const routes: Routes = [
@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path:'stock-card/:code',
     component:StockInfoComponent
+  },
+  {
+    path:'add-stock',
+    component:AddStockComponent
   }
 ];
 
