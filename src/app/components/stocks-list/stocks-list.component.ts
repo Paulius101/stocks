@@ -13,4 +13,5 @@ export class StocksListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

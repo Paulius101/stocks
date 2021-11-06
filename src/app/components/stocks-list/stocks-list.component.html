@@ -1,1 +1,5 @@
+<ng-container *ngFor="let stock of stocksService.stocks">
+    <app-stock [stock]="stock"></app-stock>
+</ng-container>
+
 <button (click)="stocksService.getItems()">Receive all stocks</button>

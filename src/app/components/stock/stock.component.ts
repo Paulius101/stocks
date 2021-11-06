@@ -2,7 +2,7 @@ import { Component,  EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Stock } from 'src/app/models/stock';
 
 @Component({
-  selector: 'app-stock',
+  selector: 'app-stock[stock]',
   templateUrl: './stock.component.html',
   styleUrls: ['./stock.component.scss']
 })

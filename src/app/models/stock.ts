@@ -9,3 +9,10 @@ export class Stock {
   )
   {}
 }
+
+export interface addFormInterface{
+     name: string,
+      code: string,
+      price: number,
+      exchange:string
+}
