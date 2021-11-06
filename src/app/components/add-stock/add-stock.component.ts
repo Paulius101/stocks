@@ -22,7 +22,7 @@ export class AddStockComponent implements OnInit {
     if (form.invalid) {
       console.log("Neteisingai įvesti duomenys!");
       this.messageService.postMessage({
-        message: "Neteisingai įvesti duomenys!",
+        message: "Invalid form data!",
         type: NotificationType.Error
       });
       return;

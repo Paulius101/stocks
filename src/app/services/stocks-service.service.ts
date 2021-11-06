@@ -2,7 +2,7 @@ import {
   Injectable
 } from '@angular/core';
 import {
-  Stock, addFormInterface
+  Stock, addFormInterface, updateFormInterface
 } from '../models/stock';
 import {
   HttpClient
@@ -38,6 +38,11 @@ export class StocksServiceService {
 
     return request;
   }
+
+public updateStock(stock:updateFormInterface, code:string):Observable < any > {
+    const request = this.http.patch(`http://localhost:3000/api/stock/${code}`, stock);
+  return request;
+}
 
   public getStockByCode(code: string): Stock {
     const stockResult = this._stocks.find((obj: Stock) => obj.code == code)

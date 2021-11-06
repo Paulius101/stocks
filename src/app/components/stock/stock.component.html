@@ -1,7 +1,8 @@
 <div class="stock-card">
     <h3>{{stock.name}}</h3>
+
     <div class="buttons">
         <button [routerLink]="['/stock-card', stock.code]">View stock information</button>
-        <button (click)="onStockAmend.emit()">Modify stock information</button>
+        <button [routerLink]="['/update-stock', stock.code]" (click)="onStockAmend.emit()">Modify stock information</button>
     </div>
 </div>

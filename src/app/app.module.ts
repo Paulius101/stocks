@@ -11,6 +11,7 @@ import { AddStockComponent } from './components/add-stock/add-stock.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import {FormsModule} from "@angular/forms";
 import { OpeningEffectComponent } from './components/opening-effect/opening-effect.component';
+import { ModifyStockComponent } from './components/modify-stock/modify-stock.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OpeningEffectComponent } from './components/opening-effect/opening-effe
     StockInfoComponent,
     AddStockComponent,
     MessagesComponent,
-    OpeningEffectComponent
+    OpeningEffectComponent,
+    ModifyStockComponent
   ],
   imports: [
     BrowserModule,

@@ -16,3 +16,8 @@ export interface addFormInterface{
       price: number,
       exchange:string
 }
+
+export interface updateFormInterface{
+  price:number,
+  exchange:string
+}
