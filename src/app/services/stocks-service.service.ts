@@ -41,6 +41,7 @@ export class StocksServiceService {
 
 public updateStock(stock:updateFormInterface, code:string):Observable < any > {
     const request = this.http.patch(`http://localhost:3000/api/stock/${code}`, stock);
+     console.log("Update stock response:", request);
   return request;
 }
 

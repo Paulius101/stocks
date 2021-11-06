@@ -1,7 +1,7 @@
 a {
   -webkit-transform: none;
           transform: none;
-  color: #435baf;
+  color: #8F60C3;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.8rem;
@@ -43,6 +43,7 @@ a:hover {
 }
 
 .content button {
+  opacity: 0.7;
   font-family: 'Heebo';
   display: inline-block;
   padding: .75rem 1.25rem;
@@ -66,7 +67,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #435baf;
+  background-color: #8F60C3;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -78,7 +79,7 @@ a:hover {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #2e3e78;
+  background-color: #693b9c;
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: 10rem;
@@ -103,5 +104,4 @@ a:hover {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  background-color: #435baf;
 }

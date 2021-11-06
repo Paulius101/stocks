@@ -3,3 +3,11 @@ html {
   font-size: 62.5%;
   margin-top: 0px;
 }
+
+body {
+  background-image: url(./assets/board.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

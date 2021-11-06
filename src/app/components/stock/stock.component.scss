@@ -1,6 +1,7 @@
-$color: rgb(211, 79, 79);
+$color: #8F60C3;
 
 .stock-card {
+  color: $color;
   font-family: 'Heebo';
   font-size: 1.6rem;
   display: flex;
@@ -31,6 +32,7 @@ $color: rgb(211, 79, 79);
   .buttons {
     font-family: 'Heebo';
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
     margin-bottom: 1rem;
