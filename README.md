@@ -10,7 +10,8 @@ Akcijos (Stock) modelis susideda iš šių atributų:
 
 Platformos reikalavimai: 
 * Atvaizduoti visas akcijas ir jų informaciją 
-* Galimybė peržiūrėti akcijos informaciją individualiai (unikaliam adrese (route)) * Galimybė pridėti akciją 
+* Galimybė peržiūrėti akcijos informaciją individualiai (unikaliam adrese (route))
+* Galimybė pridėti akciją 
 * Galimybė atnaujinti akcijos informacija 
 * Sugalvokite savo papildomo funkcionalumo
 
