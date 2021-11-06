@@ -1,8 +1,13 @@
 <app-opening-effect></app-opening-effect>
-<a routerLink="/add-stock">Add new stock</a><br>
+<div class="content">
+    <div class="options">
+        <button (click)="stocksService.getItems()">Receive all stocks</button>
+        <button routerLink="/add-stock">Add new stock</button><br>
+    </div>
+    <div class="list">
+        <ng-container *ngFor="let stock of stocksService.stocks">
+            <app-stock [stock]="stock"></app-stock>
+        </ng-container>
+    </div>
 
-<ng-container *ngFor="let stock of stocksService.stocks">
-    <app-stock [stock]="stock"></app-stock>
-</ng-container>
-
-<button (click)="stocksService.getItems()">Receive all stocks</button>
+</div>

@@ -1,0 +1,96 @@
+.stock-card {
+  font-family: 'Heebo';
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.stock-card h3 {
+  font-family: "Lobster", cursive;
+  font-size: 2.1rem;
+}
+
+.stock-card img {
+  width: 470px;
+  height: 370px;
+}
+
+.stock-card .buttons {
+  font-family: 'Heebo';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.stock-card .buttons button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 16rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: .20rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stock-card .buttons button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d34f4f;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.stock-card .buttons button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ab2b2b;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.stock-card .buttons button:hover {
+  color: #fff;
+}
+
+.stock-card .buttons button:hover:before {
+  width: 100%;
+}
+
+.stock-card .buttons button:hover {
+  cursor: pointer;
+}
