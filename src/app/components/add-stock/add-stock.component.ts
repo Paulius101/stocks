@@ -42,7 +42,7 @@ export class AddStockComponent implements OnInit {
 
     console.log(stock);
 
-    this.stockService.postStock(stock).subscribe((response) => {
+    this.stockService.postStock(stock).subscribe(() => {
 
 
       this.messageService.postMessage({

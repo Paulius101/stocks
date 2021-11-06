@@ -10,6 +10,7 @@ import { StockInfoComponent } from './components/stock-info/stock-info.component
 import { AddStockComponent } from './components/add-stock/add-stock.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import {FormsModule} from "@angular/forms";
+import { OpeningEffectComponent } from './components/opening-effect/opening-effect.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     StockComponent,
     StockInfoComponent,
     AddStockComponent,
-    MessagesComponent
+    MessagesComponent,
+    OpeningEffectComponent
   ],
   imports: [
     BrowserModule,
