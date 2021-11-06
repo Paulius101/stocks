@@ -1,27 +1,25 @@
-# Stocks
+Sukurkite platformą skirtą biržos akcijoms (vartybiniams popieriams) valdyti.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+Akcijos (Stock) modelis susideda iš šių atributų: 
+* name: string - Kompanijos pavadinimas (pvz.: Apple) 
+* code: string - Akcijos pavadinimas (pvz.: AAPL) 
+* price: number - Akcijos vieneto kaina 
+* previousPrice: number - Akcijos vieneto kaina praėjusią dieną 
+* exchange: string - Biržos pavadinimas (pvz.: NASDAQ)
+ * favorite: boolean - Atributas, kuris nurodo, ar akcija pridėta prie stebimų akcijų.
 
-## Development server
+Platformos reikalavimai: 
+* Atvaizduoti visas akcijas ir jų informaciją 
+* Galimybė peržiūrėti akcijos informaciją individualiai (unikaliam adrese (route)) * Galimybė pridėti akciją 
+* Galimybė atnaujinti akcijos informacija 
+* Sugalvokite savo papildomo funkcionalumo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Informacija apie serverį
+Atsisiųskite archyvą (zip) ir jame rasite serverį, kurį galite pasileisti lokaliai. Serverį galite pasiekti adresu http://localhost:3000.
 
-## Code scaffolding
+Serverio paleidimui naudokite šias komandas: * npm install * node index.js
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Galimi serverio resursai (endpoints): 
+* GET /api/stock - grąžina visų egzistuojančių akcijų duomenis (JSON - stock modelių masyvą). 
+* POST /api/stock - ledžia pridėti naują akciją. 
+* PATCH /api/stock/:code - ledžia atnaujinti akciją pagal nurodytą kodą (atkreipkite dėmesį, kad kiekviena akcija turi savo unikalų kodą, o ne ID, pvz.: AAPL).
