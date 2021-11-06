@@ -1,3 +1,5 @@
+<button routerLink="/">Return to stocks list</button>
+
 <form #stockUpdateForm="ngForm">
    <input type="number" id="stockPrice" placeholder="Price" name="stockPrice" ngModel min="1" required #stockPriceInput="ngModel">
    <div *ngIf="stockPriceInput.invalid && stockPriceInput.touched">Stock price undefined</div>
@@ -11,5 +13,3 @@
 
    <button (click)="updateStock(stockUpdateForm)">Update stock info</button>
 </form>
-
-<a routerLink="/">Go back to stock list</a>
