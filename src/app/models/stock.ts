@@ -5,7 +5,7 @@ export class Stock {
     public price:number,
     public previousPrice:number,
     public exchange:string,
-    public favorite:boolean
+    public favorite:boolean = false
   )
   {}
 }
@@ -19,5 +19,6 @@ export interface addFormInterface{
 
 export interface updateFormInterface{
   price:number,
-  exchange:string
+  exchange:string,
+  favorite:boolean,
 }

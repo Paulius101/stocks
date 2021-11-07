@@ -45,15 +45,22 @@ export class ModifyStockComponent implements OnInit {
       });
       return;
     }
+   
 
     const stockPrice = form.form.controls.stockPrice.value;
 
     const stockExchange = form.form.controls.stockExchange.value
 
+    const favorite = form.form.controls.stockFavorite.value
+
+    
+
+
 
     const stock: updateFormInterface = {
       price: stockPrice,
-      exchange: stockExchange
+      exchange: stockExchange,
+      favorite:(favorite=='1')
     };
 
 

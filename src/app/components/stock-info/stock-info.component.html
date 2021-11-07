@@ -11,4 +11,7 @@
     <p>{{stockInfo.previousPrice}}</p>
     <h3>Stock exchange</h3>
     <p>{{stockInfo.exchange}}</p>
+    <h3>Watched</h3>
+    <p *ngIf="stockInfo.favorite === true">Yes</p>
+    <p *ngIf="stockInfo.favorite !== true">No</p>
 </div>
