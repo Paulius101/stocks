@@ -1,9 +1,7 @@
 import {
   Injectable
 } from '@angular/core';
-import {
-  Stock, addFormInterface, updateFormInterface
-} from '../models/stock';
+import {Stock, addFormInterface, updateFormInterface} from 'src/app/models/stock';
 import {
   HttpClient
 } from "@angular/common/http";

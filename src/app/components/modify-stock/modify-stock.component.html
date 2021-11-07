@@ -10,8 +10,9 @@
                     redBorder: stockExchangeInput.invalid && stockExchangeInput.touched
                  }">
    <br>
-   <input #stockFavoriteInput="ngModel" name="stockFavorite" placeholder="Stock exchange" ngModel required>
-
-
+   <select #stockFavoriteInput="ngModel" name="stockFavorite" placeholder="Watched?" ngModel required>
+      <option>Yes</option>
+      <option>No</option>
+   </select>
    <button (click)="updateStock(stockUpdateForm)">Update stock info</button>
 </form>
