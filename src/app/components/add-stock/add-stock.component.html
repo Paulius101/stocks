@@ -17,6 +17,9 @@
    <div *ngIf="stockPriceInput.invalid && stockPriceInput.touched">Stock price undefined</div>
    <br>
 
+   <input type="number" name="previousPrice" #stockPreviousPriceInput="ngModel" ngModel required placeholder="Previous price"> <br>
+   <div *ngIf="stockPreviousPriceInput.invalid && stockPreviousPriceInput.touched">Stock previous price undefined</div>
+
    <input #stockExchangeInput="ngModel" name="stockExchange" placeholder="Stock exchange" ngModel required minlength="3" [ngClass]="{
                     greenBorder: stockExchangeInput.valid,
                     redBorder: stockExchangeInput.invalid && stockExchangeInput.touched

@@ -29,15 +29,17 @@ export class AddStockComponent implements OnInit {
       return;
     }
 
-    const stockName = form.form.controls.stockName.value;
-    const stockCode = form.form.controls.stockCode.value;
-    const stockPrice = form.form.controls.stockPrice.value;
-    const stockExchange = form.form.controls.stockExchange.value
+    const stockName = form.controls.stockName.value;
+    const stockCode = form.controls.stockCode.value;
+    const stockPrice = form.controls.stockPrice.value;
+    const stockPrevPrice = form.controls.previousPrice.value;
+    const stockExchange = form.controls.stockExchange.value
 
     const stock: addFormInterface= {
       name: stockName,
       code: stockCode,
       price: stockPrice,
+      previousPrice:stockPrevPrice,
       exchange:stockExchange
     };
 
