@@ -60,7 +60,7 @@ export class ModifyStockComponent implements OnInit {
     const stock: updateFormInterface = {
       price: stockPrice,
       exchange: stockExchange,
-      favorite:(favorite=='1')
+      favorite:(favorite==='1')
     };
 
 

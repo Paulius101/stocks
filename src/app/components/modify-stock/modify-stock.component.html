@@ -11,8 +11,8 @@
                  }">
    <br>
    <select #stockFavoriteInput="ngModel" name="stockFavorite" placeholder="Watched?" ngModel required>
-      <option>Yes</option>
-      <option>No</option>
+      <option value="1">Yes</option>
+      <option value="0">No</option>
    </select>
    <button (click)="updateStock(stockUpdateForm)">Update stock info</button>
 </form>

@@ -4,6 +4,7 @@ import { StocksServiceService } from 'src/app/services/stocks-service.service';
 import { Stock, addFormInterface } from 'src/app/models/stock';
 import { MessagesService } from 'src/app/services/messages.service';
 import { NotificationType } from 'src/app/models/notification';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { NotificationType } from 'src/app/models/notification';
 })
 export class AddStockComponent implements OnInit {
 
-  constructor(private stockService:StocksServiceService, public messageService:MessagesService) { }
+  constructor(private stockService:StocksServiceService, public messageService:MessagesService, private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -51,6 +52,7 @@ export class AddStockComponent implements OnInit {
       });
 
       form.form.reset();
+      this.route.navigate(['/'])
     });
   }
 }
