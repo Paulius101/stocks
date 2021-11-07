@@ -19,7 +19,7 @@ import {
   NotificationType
 } from 'src/app/models/notification';
 import {
-  ActivatedRoute
+  ActivatedRoute, Router
 } from '@angular/router';
 
 @Component({
@@ -30,7 +30,7 @@ import {
 export class ModifyStockComponent implements OnInit {
   public code!: string;
 
-  constructor(public stockService: StocksServiceService, public messageService: MessagesService, private route: ActivatedRoute) {}
+  constructor(public stockService: StocksServiceService, public messageService: MessagesService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.code = this.route.snapshot.params['code']
@@ -73,6 +73,7 @@ export class ModifyStockComponent implements OnInit {
       });
 
       form.form.reset();
+      this.router.navigate(['/'])
     });
 
   }
