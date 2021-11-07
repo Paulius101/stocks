@@ -9,7 +9,7 @@ Akcijos (Stock) modelis susideda iš šių atributų:
  * favorite: boolean - Atributas, kuris nurodo, ar akcija pridėta prie stebimų akcijų.
 
 Platformos reikalavimai: 
-* Atvaizduoti visas akcijas ir jų informaciją (favorite truksta)
+* Atvaizduoti visas akcijas ir jų informaciją 
 * Galimybė peržiūrėti akcijos informaciją individualiai (unikaliam adrese (route))
 * Galimybė pridėti akciją 
 * Galimybė atnaujinti akcijos informacija 

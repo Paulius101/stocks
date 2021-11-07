@@ -47,11 +47,11 @@ export class ModifyStockComponent implements OnInit {
     }
    
 
-    const stockPrice = form.form.controls.stockPrice.value;
+    const stockPrice = form.controls.stockPrice.value;
 
-    const stockExchange = form.form.controls.stockExchange.value
+    const stockExchange = form.controls.stockExchange.value
 
-    const favorite = form.form.controls.stockFavorite.value
+    const favorite = form.controls.stockFavorite.value
 
     
 

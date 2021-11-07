@@ -10,15 +10,8 @@ export class StockComponent implements OnInit {
 @Input()
   public stock!: Stock;
 
-  @Output()
-  onStockReview!: EventEmitter<void>;
-
-  @Output()
-  onStockAmend: EventEmitter<void>;
 
   constructor() { 
-    this.onStockReview = new EventEmitter<void>();
-    this.onStockAmend = new EventEmitter<void>();
   }
 
   ngOnInit(): void {

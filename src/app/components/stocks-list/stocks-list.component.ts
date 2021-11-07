@@ -30,5 +30,9 @@ export class StocksListComponent implements OnInit {
       opacity: 1,
       duration: 1
     }, "3");
+
+    this.stocksService.getItems()
   }
+
+
 }
