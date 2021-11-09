@@ -4,11 +4,27 @@ import { StocksListComponent } from './components/stocks-list/stocks-list.compon
 import { AddStockComponent} from './components/add-stock/add-stock.component'
 import { StockInfoComponent } from './components/stock-info/stock-info.component';
 import { ModifyStockComponent } from './components/modify-stock/modify-stock.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
     {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+    {
+    path: 'list',
+    component: StocksListComponent,
+  },
+    {
     path: '',
-    component: StocksListComponent
+    redirectTo: 'list',
+    pathMatch: 'full'
   },
   {
     path:'stock-card/:code',
@@ -16,7 +32,8 @@ const routes: Routes = [
   },
   {
     path:'add-stock',
-    component:AddStockComponent
+    component:AddStockComponent,
+    // canActivate: [LoginGuard]
   },
   {
     path:'update-stock/:code',
