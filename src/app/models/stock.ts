@@ -23,3 +23,7 @@ export interface updateFormInterface{
   exchange:string,
   favorite:boolean,
 }
+
+export interface searchStock{
+  name:string
+}

@@ -18,6 +18,7 @@ import {
 import {
   MessagesService
 } from './messages.service';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -27,7 +28,7 @@ export class StocksServiceService {
   private _stocks: Stock[] = []
 
   constructor(public http: HttpClient, private messageService: MessagesService,
-    private accessService: AccessService) {}
+    private accessService: AccessService, public router:Router) {}
 
   public get stocks(): Stock[] {
     return this._stocks;
@@ -84,6 +85,16 @@ export class StocksServiceService {
       return stockResult
     }
     return this._stocks[0]
+  }
+
+  
+  public getStockByName(name: string): Stock {
+    const stockResult = this._stocks.find((obj: Stock) => obj.name == name)
+    if (stockResult !== undefined) {
+      return stockResult
+    }
+    return this._stocks[0]
+
   }
 
 }

@@ -14,6 +14,7 @@ import { OpeningEffectComponent } from './components/opening-effect/opening-effe
 import { ModifyStockComponent } from './components/modify-stock/modify-stock.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegisterComponent } from './register/register.component';
     OpeningEffectComponent,
     ModifyStockComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

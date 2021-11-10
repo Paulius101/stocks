@@ -5,6 +5,10 @@
         <button routerLink="/add-stock">Add new stock</button><br>
         <button (click)="accessService.logout()">Log out</button>
     </div>
+    <form>
+        <input placeholder="Search with stock name" [(ngModel)]="stockName" name="stock"> <br>
+        <button [routerLink]="['/search', stockName]">Search stock by name</button>
+    </form>
     <div class="list">
         <ng-container *ngFor="let stock of stocksService.stocks">
             <app-stock [stock]="stock"></app-stock>

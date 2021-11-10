@@ -7,6 +7,7 @@ import { ModifyStockComponent } from './components/modify-stock/modify-stock.com
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginGuard } from './guards/login.guard';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
     {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path:'stock-card/:code',
     component:StockInfoComponent
+  },
+  {
+    path:'search/:name',
+    component:SearchComponent
   },
   {
     path:'add-stock',
