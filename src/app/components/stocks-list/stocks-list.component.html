@@ -3,6 +3,7 @@
     <div class="options">
         <button (click)="stocksService.getItems()">Receive all stocks</button>
         <button routerLink="/add-stock">Add new stock</button><br>
+        <button (click)="accessService.logout()">Log out</button>
     </div>
     <div class="list">
         <ng-container *ngFor="let stock of stocksService.stocks">

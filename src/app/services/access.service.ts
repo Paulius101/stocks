@@ -1,15 +1,24 @@
-import {Injectable} from '@angular/core';
-import {User} from "../models/user";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {
+  Injectable
+} from '@angular/core';
+import {
+  User
+} from "../models/user";
+import {
+  HttpClient
+} from "@angular/common/http";
+import {
+  Observable
+} from "rxjs";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccessService {
-  private _token?: string;
+  private _token ? : string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public router:Router) {
     this._token = window.sessionStorage.getItem("token") || undefined;
   }
 
@@ -17,24 +26,32 @@ export class AccessService {
     return this._token;
   }
 
-  public setToken(token: string): void {
+  public setToken(token : string): void {
     this._token = token;
-
-    window.sessionStorage.setItem("token", token);
+    if (token)
+      window.sessionStorage.setItem("token", token);
+      else
+      window.sessionStorage.removeItem(token)
   }
 
   public get isLoggedIn(): boolean {
     return !!this._token;
   }
 
-  public registerUser(user: User): Observable<Object> {
+  public registerUser(user: User): Observable < Object > {
     return this.http.post("http://localhost:3000/api/user/register", user);
   }
 
-  public login(user: User): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>("http://localhost:3000/api/user/login", user);
+  public login(user: User): Observable < LoginResponse > {
+    return this.http.post < LoginResponse > ("http://localhost:3000/api/user/login", user);
   }
+
+  public logout():void {
+  this.setToken('');
+  this.router.navigate(['login'])
 }
+}
+
 
 export interface LoginResponse {
   token: string;

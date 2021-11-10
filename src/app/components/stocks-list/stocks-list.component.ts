@@ -8,6 +8,7 @@ import {
 import {
   StocksServiceService
 } from 'src/app/services/stocks-service.service';
+import { AccessService } from 'src/app/services/access.service';
 
 @Component({
   selector: 'app-stocks-list',
@@ -16,7 +17,7 @@ import {
 })
 export class StocksListComponent implements OnInit {
 
-  constructor(public stocksService: StocksServiceService) {}
+  constructor(public stocksService: StocksServiceService, public accessService:AccessService ) {}
 
   ngOnInit(): void {
     const listAnim = gsap.timeline({
@@ -32,8 +33,8 @@ export class StocksListComponent implements OnInit {
     }, "3");
 
     this.stocksService.getItems()
-  }
 
+  }
 
 }
  
