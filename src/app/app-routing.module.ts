@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path:'add-stock',
     component:AddStockComponent,
-    // canActivate: [LoginGuard]
+    canActivate: [LoginGuard]
   },
   {
     path:'update-stock/:code',
