@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
         this.accessService.setToken(response.token);
 
-        this.router.navigate(["/"]);
+        this.router.navigate(["/list"]);
       },
       error: () => {
         this.messagesService.postMessage({

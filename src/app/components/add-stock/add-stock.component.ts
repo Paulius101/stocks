@@ -54,7 +54,7 @@ export class AddStockComponent implements OnInit {
       });
 
       form.form.reset();
-      this.route.navigate(['/'])
+      this.route.navigate(['/list'])
     });
   }
 }

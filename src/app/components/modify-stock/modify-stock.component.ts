@@ -71,7 +71,7 @@ export class ModifyStockComponent implements OnInit {
       });
 
       form.form.reset();
-      this.router.navigate(['/'])
+      this.router.navigate(['/list'])
     });
 
   }

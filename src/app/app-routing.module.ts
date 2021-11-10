@@ -23,7 +23,7 @@ const routes: Routes = [
   },
     {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path:'add-stock',
     component:AddStockComponent,
-    canActivate: [LoginGuard]
+    // canActivate: [LoginGuard]
   },
   {
     path:'update-stock/:code',
