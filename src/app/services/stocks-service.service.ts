@@ -19,6 +19,7 @@ import {
   MessagesService
 } from './messages.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -37,7 +38,7 @@ export class StocksServiceService {
   public getItems(): void {
     if (!this.accessService.token)
       throw new Error("You need access token for this request");
-    const request = this.http.get("http://localhost:3000/api/stock", {
+    const request = this.http.get(`${environment.baseRestUrl}/api/stock`, {
       headers: {
         "X-AUTH-HEADER": this.accessService.token
       },
@@ -56,7 +57,7 @@ export class StocksServiceService {
     if (!this.accessService.token)
       throw new Error("You need access token for this request");
 
-    const request = this.http.post("http://localhost:3000/api/stock",
+    const request = this.http.post(`${environment.baseRestUrl}/api/stock`,
       stock, {
         headers: {
           "X-AUTH-HEADER": this.accessService.token
@@ -70,7 +71,7 @@ export class StocksServiceService {
     if (!this.accessService.token)
       throw new Error("You need access token for this request");
 
-    const request = this.http.patch(`http://localhost:3000/api/stock/${code}`, stock, {
+    const request = this.http.patch(`${environment.baseRestUrl}/api/stock/${code}`, stock, {
       headers: {
         "X-AUTH-HEADER": this.accessService.token
       }

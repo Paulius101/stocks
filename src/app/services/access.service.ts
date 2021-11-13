@@ -11,6 +11,7 @@ import {
   Observable
 } from "rxjs";
 import {Router} from "@angular/router";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -39,11 +40,11 @@ export class AccessService {
   }
 
   public registerUser(user: User): Observable < Object > {
-    return this.http.post("http://localhost:3000/api/user/register", user);
+    return this.http.post(`${environment.baseRestUrl}api/user/register`, user);
   }
 
   public login(user: User): Observable < LoginResponse > {
-    return this.http.post < LoginResponse > ("http://localhost:3000/api/user/login", user);
+    return this.http.post < LoginResponse > (`${environment.baseRestUrl}/api/user/login`, user);
   }
 
   public logout():void {
