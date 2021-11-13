@@ -40,7 +40,7 @@ export class AccessService {
   }
 
   public registerUser(user: User): Observable < Object > {
-    return this.http.post(`${environment.baseRestUrl}api/user/register`, user);
+    return this.http.post(`${environment.baseRestUrl}/api/user/register`, user);
   }
 
   public login(user: User): Observable < LoginResponse > {
